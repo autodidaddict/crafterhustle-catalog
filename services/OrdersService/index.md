@@ -1,17 +1,31 @@
 ---
 id: OrdersService
-version: 0.0.2
+version: 0.0.1
 name: Orders Service
 summary: |
   Service that handles orders
-owners:
-    - dboyne
 receives:
   - id: InventoryAdjusted
     version: 0.0.3
-sends:
-  - id: AddInventory  
-    version: 0.0.3
+  - id: FulfillLineItem
+    version: 0.0.1
+  - id: CreateOrder
+    version: 0.0.1
+  - id: CancelOrder
+    version: 0.0.1
+  - id: CancelLineItem
+    version: 0.0.1
+sends:  
+  - id: OrderFulfilled
+    version: 0.0.1
+  - id: OrderCreated
+    version: 0.0.1
+  - id: OrderCancelled
+    version: 0.0.1
+  - id: LineItemAdded
+    version: 0.0.1
+  - id: LineItemRemoved
+    version: 0.0.1
 repository:
   language: JavaScript
   url: https://github.com/boyney123/pretend-shipping-service

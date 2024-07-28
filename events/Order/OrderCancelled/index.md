@@ -44,8 +44,6 @@ The OrderCancelled event is triggered whenever an existing order is cancelled. T
 
 ```
 
-## Schema
+## JSON Schema
 
-JSON schema for the event.
-
-<Schema title="JSON Schema" file="schema.json"/>
+<SchemaViewer title="" file="schema.json"/>

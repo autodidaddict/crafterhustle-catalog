@@ -1,6 +1,6 @@
 ---
-id: OrderAmended
-name: Order amended
+id: LineItemRemoved
+name: Line item removed
 version: 0.0.1
 summary: |
   Indicates an order has been changed

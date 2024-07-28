@@ -1,16 +1,12 @@
 ---
-id: Orders
-name: Orders
+id: Shows
+name: Shows
 version: 0.0.1
 # owners:
 #   - dboyne
-services:
-  - id: OrdersService
-    version: 0.0.1
-  - id: InventoryService
-    version: 0.0.1
-  - id: CatalogService
-    version: 0.0.1
+services: []
+#   - id: InventoryService
+#     version: 0.0.2
 #   - id: NotificationService
 #     version: 0.0.2
 #   - id: OrdersService

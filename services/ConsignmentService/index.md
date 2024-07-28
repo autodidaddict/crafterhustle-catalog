@@ -1,23 +1,25 @@
 ---
-id: InventoryService
+id: ConsignmentService
 version: 0.0.1
-name: Inventory Service
+name: Consignment Service
 summary: |
-  Service that handles the inventory
-owners:
-    - dboyne
-    - full-stack
-    - mobile-devs
-receives:
-  - id: OrderFulfilled
-    version: 0.0.1  
-  - id: UpdateInventory
-    version: 0.0.1
+  Service that handles consignments
+receives: []
+  # - id: OrderConfirmed
+  #   version: 0.0.1
+  # - id: OrderCancelled
+  #   version: 0.0.1
+  # - id: OrderAmended
+  #   version: 0.0.1
+  # - id: UpdateInventory
+  #   version: 0.0.3
 sends:
-  - id: InventoryAdjusted
-    version: 0.0.4
-  - id: OutOfStock
-    version: 0.0.3
+  - id: ConsignmentStarted
+    version: 0.0.1
+  - id: ConsignmentCompleted
+    version: 0.0.1
+  - id: ConsigneeUpdated
+    version: 0.0.1  
 repository:
   language: JavaScript
   url: https://github.com/boyney123/pretend-shipping-service

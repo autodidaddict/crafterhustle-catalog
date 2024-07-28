@@ -1,15 +1,9 @@
 ---
 id: UpdateInventory
 name: Update inventory
-version: 0.0.3
+version: 0.0.1
 summary: |
   Command that will update a given inventory item
-owners:
-    - dboyne
-    - msmith
-    - asmith
-    - full-stack
-    - mobile-devs
 badges:
     - content: Recently updated!
       backgroundColor: green
