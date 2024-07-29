@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OrderFulfilledEvent",
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the order that was fulfilled."
+      },      
+      "orderItems": {
+        "type": "array",
+        "description": "A list of the line items on the order at the time of fulfillment.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "itemId": {
+              "type": "string",
+              "format": "uuid",
+              "description": "The unique identifier of the line item."
+            },
+            "sku": {
+              "type": "string",
+              "description": "The SKU for this item"
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "The quantity of the item ordered."
+            }           
+          },
+          "required": ["itemId"]      
+        }
+      },     
+      "notes": {
+        "type": "string",
+        "description": "Optional notes describing the fulfillment."
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The date and time when the order was fulfilled."
+      }
+    },
+    "required": ["orderId", "timestamp"],
+    "additionalProperties": false
+  }
+  

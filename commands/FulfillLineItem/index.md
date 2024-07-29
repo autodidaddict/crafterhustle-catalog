@@ -4,13 +4,18 @@ name: Fulfill Line Item
 version: 0.0.1
 summary: |
   Command requesting a line item of an order be filled
-badges:
-    - content: Recently updated!
-      backgroundColor: green
-      textColor: green
+badges: []
 schemaPath: "schema.json"
 ---
-TBD
 
 ## Overview
-Orders are manually fulfilled by comission or by the sale of an item from a consignment, and are automatically fulfilled (e.g. no commmand required) when the order is for an in-stock item.
+The fulfillment of a line item can happen immediately, as in the case with a point of sale transaction. It can happen at some later date in the case of custom orders (commission). Line items for consignment are fulfilled when they are sold to customers by the consignee.
+
+## Architecture diagram
+
+<NodeGraph />
+
+
+## Schema (JSON)
+
+<SchemaViewer title="" file="schema.json" />

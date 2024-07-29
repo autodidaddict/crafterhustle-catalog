@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OrderAmendedEvent",
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the order."
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the order."
+      },     
+      "customerRef": {
+        "type": "string",
+        "format": "uuid",
+        "description": "If set, indicates the customer associated with this order."
+      },
+      "consignmentRef": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Optionally associate this order with a consignment"
+      },
+      "showRef": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Optionally associate this order with a show"
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Indicates when this amendment took place"
+      }
+    },
+    "required": ["orderId"],
+    "additionalProperties": false
+  }
+  

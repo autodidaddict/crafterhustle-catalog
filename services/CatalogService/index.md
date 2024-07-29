@@ -4,17 +4,13 @@ version: 0.0.1
 name: Catalog Service
 summary: |
   Service that handles all aspect of product catalog management
-receives: []
-  # - id: OrderConfirmed
-  #   version: 0.0.1
-  # - id: OrderCancelled
-  #   version: 0.0.1
-  # - id: OrderAmended
-  #   version: 0.0.1
-  # - id: UpdateInventory
-  #   version: 0.0.3
-sends: []  
-repository:
-  language: JavaScript
-  url: https://github.com/boyney123/pretend-shipping-service
+receives: [] 
+sends: [] 
 ---
+## Overview
+
+The catalog service is responsible for managing the product "catalog", which is a list of items on hand in physical inventory as well as items available for commission.
+
+## Architecture diagram
+
+<NodeGraph />

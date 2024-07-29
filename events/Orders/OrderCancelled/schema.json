@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OrderCancelledEvent",
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the order that was cancelled."
+      },      
+      "orderItems": {
+        "type": "array",
+        "description": "A list of the line items on the order at the time of cancellation.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "itemId": {
+              "type": "string",
+              "format": "uuid",
+              "description": "The unique identifier of the line item."
+            },
+            "sku": {
+              "type": "string",
+              "description": "The SKU for this item"
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "The quantity of the item ordered."
+            }           
+          },
+          "required": ["itemId"]      
+        }
+      },     
+      "cancellationReason": {
+        "type": "string",
+        "description": "The reason for the order cancellation, if provided."
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The date and time when the order was cancelled."
+      }
+    },
+    "required": ["orderId", "timestamp"],
+    "additionalProperties": false
+  }
+  

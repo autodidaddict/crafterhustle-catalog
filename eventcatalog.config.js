@@ -1,9 +1,9 @@
 /** @type {import('@eventcatalog/core/bin/eventcatalog.config').Config} */
 export default {
   title: 'Crafter Hustle',
-  tagline: 'Manage your craft inventory, sales, and insights',
+  tagline: 'Hustle your crafts',
   organizationName: 'Synadia Lab Demos',
-  homepageLink: 'https://crafterhustle.netlify.app',
+  homepageLink: 'https://crafterhustle.dev',
   editUrl: '',
   // By default set to false, add true to get urls ending in /
   trailingSlash: false,
@@ -12,7 +12,7 @@ export default {
   base: '/',
   // Customize the logo, add your logo to public/ folder
   logo: {
-    alt: 'EventCatalog Logo',
+    alt: 'Crafter Hustle Logo',
     src: '/logo.png',
     text: 'Crafter Hustle'
   },

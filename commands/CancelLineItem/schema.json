@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CancelLineItemCommand",
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the order."
+      },
+      "itemId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the item to cancel."
+      },
+      "notes": {
+        "type": "string",
+        "description": "Optional notes concering this cancellation."
+      }
+    },      
+    "required": ["orderId", "itemId"],
+    "additionalProperties": false
+  }
+  

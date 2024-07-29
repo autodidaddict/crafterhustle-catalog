@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreateOrderCommand",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier of the order."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the order."
+    },
+    "isConsignment": {
+      "type": "boolean",
+      "description": "Indicates whether or not this order is a consignment order."
+    }
+  },
+  "required": ["orderId", "description", "isConsignment"],
+  "additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LineItemAddedEvent",
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the order."
+      },
+      "sku": {
+        "type": "string",
+        "description": "Somewhat human-friendly code for this item (stock keeping unit). Note that SKUs are reusable while item IDs are internal and unique."
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the item unique to this order. For commissions, use this field for customer specifications."
+      },
+      "quantity": {
+        "type": "integer",
+        "description": "Number of this item ordered",
+        "minimum": 1
+      },
+      "itemId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of this line item."
+      },
+      "itemType": {
+        "type": "string",
+        "description": "Indicates the type of this line item",
+        "enum": ["commission", "stock"]
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The date and time when the order was amended, in ISO 8601 format."
+      }
+    },
+    "required": ["orderId", "itemId", "sku", "itemType", "quantity", "timestamp"],
+    "additionalProperties": false
+  }
+  

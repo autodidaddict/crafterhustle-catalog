@@ -1,7 +1,7 @@
 ---
 id: OrdersService
 version: 0.0.1
-name: Orders Service
+name: Orders
 summary: |
   Service that handles orders
 receives:
@@ -15,6 +15,8 @@ receives:
     version: 0.0.1
   - id: CancelLineItem
     version: 0.0.1
+  - id: AmendOrder
+    version: 0.0.1
 sends:  
   - id: OrderFulfilled
     version: 0.0.1
@@ -26,17 +28,15 @@ sends:
     version: 0.0.1
   - id: LineItemRemoved
     version: 0.0.1
-repository:
-  language: JavaScript
-  url: https://github.com/boyney123/pretend-shipping-service
-schemaPath: "openapi.yml"
+  - id: LineItemFulfilled
+    version: 0.0.1
+  - id: OrderAmended
+    version: 0.0.1
 ---
 
 ## Overview
 
-The Orders Service is responsible for managing customer orders within the system. It handles order creation, updating, status tracking, and interactions with other services such as Inventory, Payment, and Notification services to ensure smooth order processing and fulfillment.
-
-<OpenAPI />
+The Orders service is responsible for managing all activities and flows for order entities.
 
 ## Architecture diagram 
 

@@ -1,19 +1,16 @@
 ---
 id: UpdateInventory
-name: Update inventory
+name: Update Inventory
 version: 0.0.1
 summary: |
   Command that will update a given inventory item
-badges:
-    - content: Recently updated!
-      backgroundColor: green
-      textColor: green
+badges: []    
 schemaPath: "schema.json"
 ---
 
 ## Overview
 
-The UpdateInventory command is issued to update the existing stock levels of a product in the inventory. This command is used by the inventory management system to adjust the quantity of products available in the warehouse or store, either by increasing or decreasing the current stock levels.
+The UpdateInventory command is issued to update the existing stock levels of a product in inventory. In most cases this command is not issued by consumers directly but by other services while they are processing events.
 
 ## Architecture diagram
 
@@ -23,14 +20,13 @@ The UpdateInventory command is issued to update the existing stock levels of a p
 
 ```json title="Payload example"
 {
-  "productId": "789e1234-b56c-78d9-e012-3456789fghij",
-  "quantityChange": -10,
-  "warehouseId": "456e7891-c23d-45f6-b78a-123456789abc",
+  "sku": "PRODABC123",
+  "quantityChange": -10,  
   "timestamp": "2024-07-04T14:48:00Z"
 }
 ```
 
 ## Schema (JSON schema)
 
-<Schema file="schema.json"/>
+<SchemaViewer title="" file="schema.json"/>
 

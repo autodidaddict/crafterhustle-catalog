@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FulfillLineItemCommand",
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the order."
+      },
+      "itemId": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The unique identifier of the item to fulfill."
+      },
+      "notes": {
+        "type": "string",
+        "description": "Optional notes concerning this fulfillment."
+      }
+    },      
+    "required": ["orderId", "itemId"],
+    "additionalProperties": false
+  }
+  

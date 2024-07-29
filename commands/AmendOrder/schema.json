@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AmendOrderCommand",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier of the order."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the order."
+    },   
+    "customerRef": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Optionally associate this order with a customer"
+    },
+    "consignmentRef": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Optionally associate this order with a consignment"
+    },
+    "showRef": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Optionally associate this order with a show"
+    },
+    "removeItems": {
+        "type": "array",
+        "items": {
+            "type": "string"
+        }
+    },
+    "addItems": {
+      "type": "array",
+      "description": "A list of items to be added to the order",
+      "items": {
+        "type": "object",
+        "properties": {
+            "itemId": {
+                "type": "string",
+                "format": "uuid",
+                "description": "Unique ID of the line item"
+            },
+            "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Number of items requested"
+            },
+            "itemType": {
+                "type": "string",
+                "enum": ["stock", "commission"]
+            },
+            "description": {
+                "type": "string"
+            }
+        },
+        "required": ["itemId", "quantity", "itemType", "description"]
+      }
+    }
+  },
+  "required": ["orderId"],
+  "additionalProperties": false
+}

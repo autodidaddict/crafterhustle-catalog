@@ -1,13 +1,9 @@
 ---
 id: InventoryService
 version: 0.0.1
-name: Inventory Service
+name: Inventory
 summary: |
   Service that handles the inventory
-owners:
-    - dboyne
-    - full-stack
-    - mobile-devs
 receives:
   - id: OrderFulfilled
     version: 0.0.1  
@@ -18,15 +14,12 @@ sends:
     version: 0.0.4
   - id: OutOfStock
     version: 0.0.3
-repository:
-  language: JavaScript
-  url: https://github.com/boyney123/pretend-shipping-service
 ---
 
 ## Overview
 
-The Inventory Service is a critical component of the system responsible for managing product stock levels, tracking inventory movements, and ensuring product availability. It interacts with other services to maintain accurate inventory records and supports operations such as order fulfillment, restocking, and inventory audits.
+The Inventory Service is a critical component of the system responsible for managing product stock levels, tracking inventory movements, and more.
 
 ## Architecture diagram
 
-<NodeGraph title="Hello world" />
+<NodeGraph />
