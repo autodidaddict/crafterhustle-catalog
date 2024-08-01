@@ -16,7 +16,6 @@ export default {
     src: '/logo.png',
     text: 'Crafter Hustle'
   },
-  landingPage: '/visualiser',
   docs: {
     sidebar: {
       // Should the sub heading be rendered in the docs sidebar?
